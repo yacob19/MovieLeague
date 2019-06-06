@@ -4,7 +4,7 @@
 #
 # Find out more about building applications with Shiny here:
 #
-#    http://shiny.rstudio.com/
+#    http://shiny.rstudio.com/ I Updated Automatically on Monday morning at 8am
 #
 
 library(shiny)
@@ -14,7 +14,7 @@ library(DT)
 shinyUI(fluidPage(
 
     # Application title
-    titlePanel("2019 Symetra Movie Leauge: I Updated Automatically on Monday morning at 8am"),
+    titlePanel("2019 Symetra Movie League: "),
 
     # Sidebar with a selector for person name
     sidebarLayout(
