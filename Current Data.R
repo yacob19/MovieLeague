@@ -39,7 +39,7 @@ LoadTodaysData <- function(month,day){
 # Import Movie League Draft Data ------------------------------------------
 
   
-  OrigMovieList <-as.data.frame(read.csv("C:/Users/JACWYD/Desktop/Rwork/RD_Actuarial/MovieLeague/MovieList.csv", stringsAsFactors = FALSE))
+  OrigMovieList <-as.data.frame(read.csv("C:/Users/JACWYD/Desktop/Rwork/MovieLeague/MovieList.csv", stringsAsFactors = FALSE))
   colnames(OrigMovieList) = c("Movie", "Owner","Bid","Factor","ReleaseDate")
   OrigMovieList <- as_tibble(OrigMovieList)
   OrigMovieList$Movie <-    stringr::str_sub(OrigMovieList$Movie, 1, 20)
@@ -71,15 +71,15 @@ HistoricalData<- HistoricalData %>% rename("Movie" = Group.1) %>% select( -x)
 HistoricalData <- HistoricalData %>%  mutate(TrueGross = `Total Gross`*Factor)
 
 
-WeeklyEst <- read.csv("C:/Users/JACWYD/Desktop/Rwork/RD_Actuarial/MovieLeague/WeeklyEst.csv")
+WeeklyEst <- read.csv("C:/Users/JACWYD/Desktop/Rwork/MovieLeague/WeeklyEst.csv")
 HistoricalData<- distinct(right_join(WeeklyEst,HistoricalData, by = "Week", keep = true))
 HistoricalData <- HistoricalData %>%  mutate(EstTotal = TrueGross/Completion, Efficiency = EstTotal/Bid)
 
-CurrentData <- read.csv("C:/Users/JACWYD/Desktop/Rwork/RD_Actuarial/MovieLeague/Historical.csv")
+CurrentData <- read.csv("C:/Users/JACWYD/Desktop/Rwork/MovieLeague/Historical.csv")
 
 HistoricalData <- rbind(CurrentData, HistoricalData)
 
-write.csv(HistoricalData,"C:/Users/JACWYD/Desktop/Rwork/RD_Actuarial/MovieLeague/Historical.csv")
+write.csv(HistoricalData,"C:/Users/JACWYD/Desktop/Rwork/MovieLeague/Historical.csv")
 
 deployApp(account = "jacobwydick")
 
