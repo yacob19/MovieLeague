@@ -1,0 +1,12 @@
+name: MovieLeauge
+title: MovieLeauge
+username:
+account: jacobwydick
+server: shinyapps.io
+hostUrl: https://api.shinyapps.io/v1
+appId: 956047
+bundleId: 2116761
+url: https://jacobwydick.shinyapps.io/MovieLeauge/
+when: 1559162388.65747
+asMultiple: FALSE
+asStatic: FALSE
