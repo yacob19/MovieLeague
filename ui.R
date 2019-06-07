@@ -14,7 +14,8 @@ library(DT)
 shinyUI(fluidPage(
 
     # Application title
-    titlePanel("2019 Symetra Movie League: "),
+    #titlePanel("2019 Symetra Movie League: I updated automatically "),
+    titlePanel("2019 Symetra Movie League: Updated Monday's @08:00"),
 
     # Sidebar with a selector for person name
     sidebarLayout(
