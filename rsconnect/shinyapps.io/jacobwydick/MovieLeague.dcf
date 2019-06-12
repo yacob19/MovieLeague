@@ -5,6 +5,6 @@ account: jacobwydick
 server: shinyapps.io
 hostUrl: https://api.shinyapps.io/v1
 appId: 958623
-bundleId: 2133467
+bundleId: 2142795
 url: https://jacobwydick.shinyapps.io/MovieLeague/
-when: 1559759230.80173
+when: 1560179743.09362

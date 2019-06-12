@@ -18,6 +18,7 @@ library(DT)
 
 shinyServer(function(input, output) {
   Data <- read.csv("Historical.csv",stringsAsFactors = FALSE)
+  
   Data$Movie <- gsub("'", "", Data$Movie)
   MovieData <- read.csv("MovieList.csv",stringsAsFactors = FALSE)
   names(MovieData) <- c("Movie","Owner", "Bid", "Factor", "ReleaseDate")
